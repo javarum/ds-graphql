@@ -1,0 +1,103 @@
+{
+    "locations": [
+      {
+        "locationID": "1",
+        "locationName": "Stadthalle",
+        "address": "Beispielstraße 22",
+        "city": "Heilbronn",
+        "country": "Deutschland",
+        "capacity": 500
+      },
+      {
+        "locationID": "2",
+        "locationName": "Konzerthalle",
+        "address": "Konzertstraße 3",
+        "city": "Neckarsulm",
+        "country": "Deutschland",
+        "capacity": 1000
+      }
+    ],
+    "events": [
+      {
+        "eventID": "1",
+        "eventName": "Irgendein Metal Konzert",
+        "eventDate": "2024-11-01",
+        "ticketPrice": 49.99,
+        "location": "1",
+        "tickets": ["1", "2"],
+        "artists": ["1"],
+        "guests": ["1", "2"]
+      },
+      {
+        "eventID": "2",
+        "eventName": "Jazz Nacht",
+        "eventDate": "2024-12-23",
+        "ticketPrice": 29.99,
+        "location": "2",
+        "tickets": ["3"],
+        "artists": ["2"],
+        "guests": ["2", "3"]
+      }
+    ],
+    "tickets": [
+      {
+        "ticketID": "1",
+        "seatNumber": 134,
+        "price": 49.99,
+        "purchaseDate": "2024-12-01",
+        "event": "1"
+      },
+      {
+        "ticketID": "2",
+        "seatNumber": 193,
+        "price": 49.99,
+        "purchaseDate": "2024-12-01",
+        "event": "1"
+      },
+      {
+        "ticketID": "3",
+        "seatNumber": 42,
+        "price": 29.99,
+        "purchaseDate": "2024-12-23",
+        "event": "2"
+      }
+    ],
+    "artists": [
+      {
+        "artistID": "1",
+        "artistName": "Mantar",
+        "events": ["1"]
+      },
+      {
+        "artistID": "2",
+        "artistName": "Armstrong Jr.",
+        "events": ["2"]
+      }
+    ],
+    "guests": [
+      {
+        "guestID": "1",
+        "guestName": "Jeanna",
+        "email": "jeanna@example.com",
+        "phone": "123-456-7890",
+        "age": 23,
+        "events": ["1"]
+      },
+      {
+        "guestID": "2",
+        "guestName": "Ulf",
+        "email": "ulf@example.com",
+        "phone": "987-654-3210",
+        "age": 35,
+        "events": ["1", "2"]
+      },
+      {
+        "guestID": "3",
+        "guestName": "Chamzat",
+        "email": "chamzat@example.com",
+        "phone": "321-123-231",
+        "age": 42,
+        "events": ["2"]
+      }
+    ]
+  }  
