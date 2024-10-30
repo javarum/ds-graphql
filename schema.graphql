@@ -1,0 +1,65 @@
+type Event {
+    eventID: ID!
+    eventName: String!
+    eventDate: String!
+    ticketPrice: Float!
+    location: Location!
+    tickets: [Ticket!]!
+    artists: [Artist!]!
+    guests: [Guest!]!
+}
+
+type Location {
+    locationID: ID!
+    locationName: String!
+    address: String!
+    city: String!
+    country: String!
+    capacity: Int!
+    events: [Event!]!
+}
+
+type Ticket {
+    ticketID: ID!
+    seatNumber: Int!
+    price: Float!
+    purchaseDate: String
+    event: Event!
+}
+
+type Artist {
+    artistID: ID!
+    artistName: String!
+    events: [Event!]!
+}
+
+type Guest {
+    guestID: ID!
+    guestName: String!
+    email: String!
+    phone: String
+    age: Int
+    events: [Event!]!
+}
+
+type Query {
+    guestsForEvent(eventID: ID!): [Guest!]!
+
+    event(eventID: ID!): Event
+}
+
+type Mutation {
+    createEvent(
+        eventName: String!,
+        eventDate: String!,
+        ticketPrice: Float!,
+        locationID: ID!,
+        artistIDs: [ID!]!,
+        guestIDs: [ID!]!
+    ): Event!
+
+    editTicketPrice(
+        ticketID: ID!,
+        newPrice: Float!
+    ): Ticket!
+}
